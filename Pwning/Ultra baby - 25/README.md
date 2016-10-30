@@ -21,43 +21,80 @@ The vulnerabilit is in read buffer size, the read buffer size is 19h, it may lay
 ![](http://i.imgur.com/Xkxk9bR.jpg)
 
 In stack ( assign `Bye` base address to rbp-8 )
+
 \------------------   <--- rsp (rbp - 20h)
+
 |  ?? ?? ?? ?? | 
+
 \------------------
+
 |  ?? ?? ?? ?? | 
+
 \------------------
+
 |  ?? ?? ?? ?? | 
+
 \------------------
+
 |  ?? ?? ?? ?? | 
+
 \------------------
+
 |  ?? ?? ?? ?? | 
+
 \------------------
+
 |  ?? ?? ?? ?? | 
+
 \------------------  <--- rbp - 8
+
 |  E0 07 00 00 |
+
 \------------------
+
 |  00 00 00 00 |
+
 \------------------  <--- rbp
 
+
 In stack ( read [payload](code) from stdin )
+
 ![](http://i.imgur.com/HhZDk9n.jpg)
+
 \------------------   <--- rsp (rbp - 20h)
+
 |  61 61 61 61 |
+
 \------------------
+
 |  61 61 61 61 |
+
 \------------------
+
 |  61 61 61 61 |
+
 \------------------
+
 |  61 61 61 61 |
+
 \------------------
+
 |  61 61 61 61 |
+
 \------------------
+
 |  61 61 61 61 |
+
 \------------------  <--- rbp - 8
+
 |  `F3` 07 00 00 | <-- `Bye` funciont base address first byte has been over lay
+
 \------------------
+
 |  00 00 00 00 |
+
 \------------------  <--- rbp
+
 
 ![](http://i.imgur.com/bwwQluV.jpg)
 The flage is `EKO{Welcome_to_pwning_challs_2k16}`
