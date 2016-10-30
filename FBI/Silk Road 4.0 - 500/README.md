@@ -7,7 +7,7 @@
 
 	"We will never make the same mistakes again, we challenge you to read our messages!" - DRP
 
-	https://silkroadzpvwzxxv.onion
+>https://silkroadzpvwzxxv.onion
 
 	Hint
 	It seems the dread pirate is using an outdated software!
